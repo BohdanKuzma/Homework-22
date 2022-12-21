@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Gallery</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .wrapper{
+    width: 1167px;
+    height: 244px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.box{
+    width: 220px;
+    height: 220px;
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    
+}
+.box:nth-of-type(1){
+    background-color: deeppink;
+    top: 10px;
+    left: 10px;
+    opacity: 1;
+}
+.box:nth-of-type(2){
+    background-color: red;
+    left: 240px;
+}
+.box:nth-of-type(3){
+    background-color: lightcoral;
+    left: 470px;
+}
+.box:nth-of-type(4){
+    background-color: lightblue;
+    left: 700px;
+}
+.box:nth-of-type(5){
+    background-color: cadetblue;
+    left: 930px;
+}
+.background{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.678);
+    z-index: -1;
+}
+.modal{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 33%;
+    z-index: 99;
+}
+
+    
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="modal"></div>
+    </div>
+
+    <div class="background">
+
+    <script src="jquery.min.js"></script>
+    <script src="AnimatedGallery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+</body>
+
+</html>
